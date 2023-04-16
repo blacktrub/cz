@@ -88,7 +88,9 @@ source $ZSH/oh-my-zsh.sh
 # else
 #   export EDITOR='mvim'
 # fi
-#alias nvim="/usr/local/bin/nvim"
+{{- if eq .chezmoi.hostname "mini" }}
+alias nvim="/usr/local/bin/nvim"
+{{- end }}
 export EDITOR='nvim'
 
 # Compilation flags
@@ -123,4 +125,7 @@ alias config='/usr/bin/git --git-dir=/home/bt/.config/ --work-tree=/home/bt'
 alias python3.5='/opt/python3.5/bin/python3.5'
 alias portacle='/opt/python3.5/bin/python3.5'
 alias cz='chezmoi'
+
+
+
 
