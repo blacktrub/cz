@@ -108,10 +108,14 @@ export EDITOR='nvim'
 
 export GOPATH=$(go env GOPATH)
 export PATH=$GOPATH/bin:$PATH
+
+{{- if eq .chezmoi.hostname "macbook-work" }}
+alias nvim="/usr/local/bin/nvim"
 alias avs="avito service"
 alias avr="avito delete && avito start"
 alias pg="pgcli"
 alias grc="go run cmd/service/main.go"
+{{- end }}
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -126,7 +130,3 @@ alias config='/usr/bin/git --git-dir=/home/bt/.config/ --work-tree=/home/bt'
 alias python3.5='/opt/python3.5/bin/python3.5'
 alias portacle='/opt/python3.5/bin/python3.5'
 alias cz='chezmoi'
-
-
-
-
