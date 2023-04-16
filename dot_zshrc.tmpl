@@ -88,7 +88,10 @@ source $ZSH/oh-my-zsh.sh
 # else
 #   export EDITOR='mvim'
 # fi
-#alias nvim="/usr/local/bin/nvim"
+
+{{- if eq .chezmoi.hostname "mini" }}
+alias nvim="/usr/local/bin/nvim"
+{{- end }}
 export EDITOR='nvim'
 
 # Compilation flags
