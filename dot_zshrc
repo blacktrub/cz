@@ -103,6 +103,13 @@ export EDITOR='nvim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+export GOPATH=$(go env GOPATH)
+export PATH=$GOPATH/bin:$PATH
+alias avs="avito service"
+alias avr="avito delete && avito start"
+alias pg="pgcli"
+alias grc="go run cmd/service/main.go"
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
