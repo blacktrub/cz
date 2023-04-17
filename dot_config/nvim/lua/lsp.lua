@@ -10,7 +10,7 @@ require("neodev").setup({
 
 local sign_cfg = {
 	bind = true,
-	floating_window=false,
+	floating_window = false,
 }
 
 local nvim_lsp = require("lspconfig")
@@ -70,9 +70,14 @@ local lsp_attach = function(client, bufnr)
 	buf_set_keymap("n", "[d", "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>", opts)
 	buf_set_keymap("n", "]d", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>", opts)
 	buf_set_keymap("n", "<space>q", "<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>", opts)
-	buf_set_keymap("n", "<C-f>", "<cmd>lua vim.lsp.buf.format()<CR>", opts)
+	-- buf_set_keymap("n", "<C-f>", "<cmd>lua vim.lsp.buf.format()<CR>", opts)
 	buf_set_keymap("n", "gu", "<cmd>lua vim.lsp.buf.incoming_calls()()<CR>", opts)
 end
+
+-- TODO: move to keymaps
+vim.keymap.set("n", "<C-f>", function()
+	vim.lsp.buf.format()
+end, { noremap = true, silent = true })
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
