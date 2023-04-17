@@ -12,6 +12,8 @@ local sources = {
 	null_ls.builtins.formatting.goimports,
 	null_ls.builtins.formatting.stylua,
 	null_ls.builtins.formatting.jq,
+	null_ls.builtins.code.jq,
+	null_ls.builtins.code_actions.gomodifytags,
 }
 
 null_ls.setup({
