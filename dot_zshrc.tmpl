@@ -110,7 +110,6 @@ export GOPATH=$(go env GOPATH)
 export PATH=$GOPATH/bin:$PATH
 
 {{- if eq .chezmoi.hostname "macbook-work" }}
-alias nvim="/usr/local/bin/nvim"
 alias avs="avito service"
 alias avr="avito delete && avito start"
 alias pg="pgcli"
