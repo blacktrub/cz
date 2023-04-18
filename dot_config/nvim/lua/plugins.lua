@@ -56,4 +56,5 @@ require("lazy").setup({
 	"chentoast/marks.nvim",
 	"sindrets/diffview.nvim",
 	"ray-x/lsp_signature.nvim",
+	"EdenEast/nightfox.nvim",
 })

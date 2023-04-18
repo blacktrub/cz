@@ -7,4 +7,5 @@
 --     colors = {bg = "#0d1117"},
 -- })
 
-vim.cmd [[colorscheme moonfly]]
+-- vim.cmd [[colorscheme moonfly]]
+vim.cmd("colorscheme nightfox")
