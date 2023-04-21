@@ -57,4 +57,5 @@ require("lazy").setup({
 	"sindrets/diffview.nvim",
 	"ray-x/lsp_signature.nvim",
 	"EdenEast/nightfox.nvim",
+	"folke/neoconf.nvim",
 })
