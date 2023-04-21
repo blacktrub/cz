@@ -162,6 +162,7 @@ require("nvim_comment").setup()
 require("todo-comments").setup({})
 require("bqf").setup()
 require("trouble").setup()
+require("marks").setup()
 
 -- require("lspfuzzy").setup()
 -- require('vim-go').setup()
