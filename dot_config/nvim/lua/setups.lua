@@ -163,7 +163,9 @@ require("todo-comments").setup({})
 require("bqf").setup()
 require("trouble").setup()
 require("marks").setup()
-require("stay-centered")
+require("stay-centered").setup({
+  skip_filetypes = {"lua", "typescript"},
+})
 
 -- require("lspfuzzy").setup()
 -- require('vim-go').setup()
