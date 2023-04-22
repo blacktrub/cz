@@ -37,8 +37,8 @@ map("n", "<leader>zr", ':lua require("dap").run_last()<cr>', opts)
 map("n", "<leader>zt", ':lua require("dapui").toggle()<cr>', opts)
 
 -- movements
-map("n", "<C-d>", "<C-d>zz", opts)
-map("n", "<C-u>", "<C-u>zz", opts)
+-- map("n", "<C-d>", "<C-d>zz", opts)
+-- map("n", "<C-u>", "<C-u>zz", opts)
 
 map("n", "<Space><Space>", ":wa<cr>", opts)
 

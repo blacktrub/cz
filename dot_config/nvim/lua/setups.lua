@@ -163,6 +163,7 @@ require("todo-comments").setup({})
 require("bqf").setup()
 require("trouble").setup()
 require("marks").setup()
+require("stay-centered").setup()
 
 -- require("lspfuzzy").setup()
 -- require('vim-go').setup()

@@ -32,7 +32,7 @@ vim.opt.laststatus = 2 -- window will always have a status line
 vim.o.swapfile = false
 -- }}} UI Config
 
-vim.opt.scrolloff = 999
+-- vim.opt.scrolloff = 999
 
 vim.o.completeopt = "menuone,noselect"
 
