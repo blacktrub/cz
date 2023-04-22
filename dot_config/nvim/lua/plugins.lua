@@ -58,5 +58,5 @@ require("lazy").setup({
 	"ray-x/lsp_signature.nvim",
 	"EdenEast/nightfox.nvim",
 	"folke/neoconf.nvim",
-	{ "arnamak/stay-centered.nvim", dev = true },
+	{ "blacktrub/stay-centered.nvim" },
 })
