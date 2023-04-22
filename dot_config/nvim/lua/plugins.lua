@@ -61,4 +61,5 @@ require("lazy").setup({
 	{ "blacktrub/stay-centered.nvim" },
 	{ "echasnovski/mini.move", version = "*" },
 	{ "echasnovski/mini.splitjoin", version = "*" },
+	{ "blacktrub/telescope-godoc.nvim", dev = true },
 })
