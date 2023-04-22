@@ -59,4 +59,6 @@ require("lazy").setup({
 	"EdenEast/nightfox.nvim",
 	"folke/neoconf.nvim",
 	{ "blacktrub/stay-centered.nvim" },
+	{ "echasnovski/mini.move", version = "*" },
+	{ "echasnovski/mini.splitjoin", version = "*" },
 })

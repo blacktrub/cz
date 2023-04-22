@@ -165,6 +165,9 @@ require("trouble").setup()
 require("marks").setup()
 require("stay-centered").setup()
 
+require("mini.move").setup()
+require("mini.splitjoin").setup()
+
 -- require("lspfuzzy").setup()
 -- require('vim-go').setup()
 -- require("lspfuzzy").setup {}
