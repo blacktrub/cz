@@ -168,6 +168,8 @@ require("stay-centered").setup()
 require("mini.move").setup()
 require("mini.splitjoin").setup()
 
+require("godoc")
+
 -- require("lspfuzzy").setup()
 -- require('vim-go').setup()
 -- require("lspfuzzy").setup {}
