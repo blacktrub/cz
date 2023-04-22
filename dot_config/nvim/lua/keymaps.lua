@@ -64,6 +64,3 @@ map("n", "<leader>l", '<cmd>lua require("harpoon.ui").toggle_quick_menu()<CR>', 
 for i = 1, 5 do
 	map("n", "<leader>" .. i, '<cmd>:lua require("harpoon.ui").nav_file(' .. i .. ")<CR>", opts)
 end
-
-map("n", "<C-k>", '<cmd>:m .+1<CR>', opts)
-map("n", "<C-j>", '<cmd>:m .-2<CR>', opts)
