@@ -21,5 +21,5 @@ require("lazy").setup({
     path = "~/projects",
     fallback = true,
   },
-  plugins
+  spec = plugins,
 })
