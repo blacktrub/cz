@@ -1,4 +1,4 @@
-require("plugins")
+require("pm")
 require("colorscheme")
 require("lsp")
 require("keymaps")
