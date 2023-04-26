@@ -171,6 +171,8 @@ require("mini.splitjoin").setup()
 
 require("godoc")
 
+require("hop").setup()
+
 -- require("lspfuzzy").setup()
 -- require('vim-go').setup()
 -- require("lspfuzzy").setup {}

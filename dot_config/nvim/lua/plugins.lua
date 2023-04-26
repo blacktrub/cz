@@ -46,4 +46,5 @@ return {
 	{ "echasnovski/mini.move", version = "*" },
 	{ "echasnovski/mini.splitjoin", version = "*" },
 	{ "blacktrub/telescope-godoc.nvim", dev = true },
+	{ "phaazon/hop.nvim", branch = "v2" },
 }
