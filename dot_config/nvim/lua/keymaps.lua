@@ -82,7 +82,3 @@ end, opts)
 vim.keymap.set("", "<A-f>", function()
 	hop.hint_words()
 end, opts)
--- TODO: what the fuck mac os?
-vim.keymap.set("", "ƒ", function()
-	hop.hint_words()
-end, opts)
