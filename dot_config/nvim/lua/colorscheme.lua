@@ -8,4 +8,5 @@
 -- })
 
 -- vim.cmd [[colorscheme moonfly]]
-vim.cmd("colorscheme nightfox")
+-- vim.cmd("colorscheme nightfox")
+vim.cmd("colorscheme tokyonight-night")
