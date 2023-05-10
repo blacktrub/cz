@@ -164,7 +164,9 @@ require("todo-comments").setup({})
 require("bqf").setup()
 require("trouble").setup()
 require("marks").setup()
-require("stay-centered").setup()
+require("stay-centered").setup({
+	skip_buftypes = { "terminal", "quickfix" },
+})
 
 require("mini.move").setup()
 require("mini.splitjoin").setup()
