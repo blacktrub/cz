@@ -129,3 +129,8 @@ alias config='/usr/bin/git --git-dir=/home/bt/.config/ --work-tree=/home/bt'
 alias python3.5='/opt/python3.5/bin/python3.5'
 alias portacle='/opt/python3.5/bin/python3.5'
 alias cz='chezmoi'
+
+{{- if eq .chezmoi.hostname "mini" }}
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
+{{- end }}
