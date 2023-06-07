@@ -126,6 +126,11 @@ nvim_lsp.gopls.setup({
 		gopls = {
 			buildFlags = { "-tags=integration" },
 		},
+		go = {
+			completion = {
+				callSnippet = "Replace",
+			},
+		},
 	},
 	capabilities = capabilities,
 })

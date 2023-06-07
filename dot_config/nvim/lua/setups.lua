@@ -178,3 +178,4 @@ require("hop").setup()
 -- require("lspfuzzy").setup()
 -- require('vim-go').setup()
 -- require("lspfuzzy").setup {}
+require("luasnip.loaders.from_vscode").lazy_load({paths = "~/.config/nvim/snippets"})

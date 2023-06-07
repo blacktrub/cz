@@ -1,0 +1,13 @@
+{
+  "name": "letsgo",
+  "contributes": {
+    "snippets": [
+      {
+        "language": [
+          "go"
+        ],
+        "path": "./go.json"
+      }
+    ]
+  }
+}

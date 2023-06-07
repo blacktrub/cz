@@ -9,10 +9,6 @@ return {
 	"nvim-telescope/telescope-ui-select.nvim",
 	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
 	"neovim/nvim-lspconfig",
-	"hrsh7th/nvim-cmp",
-	"hrsh7th/cmp-nvim-lsp",
-	"saadparwaiz1/cmp_luasnip",
-	"L3MON4D3/LuaSnip",
 	"terrortylor/nvim-comment",
 	"ojroques/nvim-lspfuzzy",
 	"junegunn/fzf",
@@ -48,4 +44,12 @@ return {
 	{ "echasnovski/mini.splitjoin", version = "*" },
 	{ "blacktrub/telescope-godoc.nvim", dev = true },
 	{ "phaazon/hop.nvim", branch = "v2" },
+	{
+		"L3MON4D3/LuaSnip",
+		version = "1.2.*",
+		build = "make install_jsregexp",
+	},
+	{ "hrsh7th/nvim-cmp" },
+	"hrsh7th/cmp-nvim-lsp",
+	{ "saadparwaiz1/cmp_luasnip" },
 }
