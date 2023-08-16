@@ -85,3 +85,5 @@ end, opts)
 vim.keymap.set("", "<leader>s", function()
 	hop.hint_char1()
 end, opts)
+
+map("n", ";", ":", opts)
