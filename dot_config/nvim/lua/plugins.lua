@@ -53,4 +53,9 @@ return {
 	"hrsh7th/cmp-nvim-lsp",
 	{ "saadparwaiz1/cmp_luasnip" },
 	{ "echasnovski/mini.pairs", version = "*" },
+	{
+		"m4xshen/hardtime.nvim",
+		dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
+		opts = {},
+	},
 }
