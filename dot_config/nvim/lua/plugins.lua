@@ -1,7 +1,9 @@
 return {
 	"nvim-lualine/lualine.nvim",
 	"kyazdani42/nvim-web-devicons",
-	"kyazdani42/nvim-tree.lua",
+	{
+		"kyazdani42/nvim-tree.lua",
+	},
 	"goolord/alpha-nvim",
 	"akinsho/toggleterm.nvim",
 	"nvim-lua/plenary.nvim",
@@ -57,9 +59,5 @@ return {
 		"m4xshen/hardtime.nvim",
 		dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
 		opts = {},
-	},
-	{
-		"stevearc/oil.nvim",
-    opts = {},
 	},
 }

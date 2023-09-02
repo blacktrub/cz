@@ -178,7 +178,3 @@ require("hop").setup()
 require("luasnip.loaders.from_vscode").lazy_load({ paths = "~/.config/nvim/snippets" })
 require("mini.pairs").setup()
 require("hardtime").setup()
-
-require("oil").setup({
-  default_file_explorer = false,
-})
