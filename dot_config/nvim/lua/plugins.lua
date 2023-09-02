@@ -1,9 +1,9 @@
 return {
 	"nvim-lualine/lualine.nvim",
 	"kyazdani42/nvim-web-devicons",
-	-- {
-	-- 	"kyazdani42/nvim-tree.lua",
-	-- },
+	{
+		"kyazdani42/nvim-tree.lua",
+	},
 	"goolord/alpha-nvim",
 	"akinsho/toggleterm.nvim",
 	"nvim-lua/plenary.nvim",
@@ -61,9 +61,23 @@ return {
 		opts = {},
 	},
 	{
-		"stevearc/oil.nvim",
-		opts = {},
-		-- Optional dependencies
-		dependencies = { "nvim-tree/nvim-web-devicons" },
+		"nvim-neorg/neorg",
+		build = ":Neorg sync-parsers",
+		dependencies = { "nvim-lua/plenary.nvim" },
+		config = function()
+			require("neorg").setup({
+				load = {
+					["core.defaults"] = {}, -- Loads default behaviour
+					["core.concealer"] = {}, -- Adds pretty icons to your documents
+					["core.dirman"] = { -- Manages Neorg workspaces
+						config = {
+							workspaces = {
+								notes = "~/notes",
+							},
+						},
+					},
+				},
+			})
+		end,
 	},
 }
