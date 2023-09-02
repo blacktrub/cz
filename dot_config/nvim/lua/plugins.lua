@@ -41,7 +41,7 @@ return {
 	"EdenEast/nightfox.nvim",
 	"folke/tokyonight.nvim",
 	"folke/neoconf.nvim",
-	{ "blacktrub/stay-centered.nvim", dev = true },
+	{ "blacktrub/stay-centered.nvim" },
 	{ "echasnovski/mini.move", version = "*" },
 	{ "echasnovski/mini.splitjoin", version = "*" },
 	{ "blacktrub/telescope-godoc.nvim", dev = true },
