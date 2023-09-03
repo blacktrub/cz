@@ -82,6 +82,11 @@ return {
 							default_workspace = "notes",
 						},
 					},
+					["core.keybinds"] = {
+						hook = function(keybinds)
+							keybinds.remap_key("norg", "i", "<M-CR>", "<C-CR>")
+						end,
+					},
 				},
 			})
 		end,
