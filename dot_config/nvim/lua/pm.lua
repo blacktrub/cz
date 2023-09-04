@@ -11,9 +11,6 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- TODO: do I need it?
--- vim.g.mapleader = " " -- Make sure to set `mapleader` before lazy so your mappings are correct
-
 local plugins = require("plugins")
 
 require("lazy").setup({

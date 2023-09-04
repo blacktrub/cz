@@ -58,7 +58,9 @@ return {
 	{
 		"m4xshen/hardtime.nvim",
 		dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
-		opts = {},
+		opts = {
+			disabled_filetypes = { "qf", "netrw", "NvimTree", "lazy", "mason", "oil", "minifiles" },
+		},
 	},
 	{
 		"nvim-neorg/neorg",
@@ -85,7 +87,7 @@ return {
 					["core.keybinds"] = {
 						config = {
 							hook = function(keybinds)
-								keybinds.remap_key("norg", "i", "<M-CR>", "<C-CR>")
+								keybinds.remap_key("norg", "n", "<M-CR>", "<C-CR>")
 							end,
 						},
 					},
@@ -93,4 +95,5 @@ return {
 			})
 		end,
 	},
+	{ "echasnovski/mini.files", version = false },
 }
