@@ -178,16 +178,6 @@ require("hop").setup()
 require("luasnip.loaders.from_vscode").lazy_load({ paths = "~/.config/nvim/snippets" })
 require("mini.pairs").setup()
 require("hardtime").setup()
--- require("mini.files").setup({
--- 	mappings = {
--- 		go_in_plus = "<CR>",
--- 	},
--- 	windows = {
--- 		width_focus = 100,
--- 		width_nofocus = 50,
--- 		width_preview = 100,
--- 	},
--- })
 
 -- Setup pwd when open nvim with PATH args
 if vim.fn.argc(-1) > 0 then

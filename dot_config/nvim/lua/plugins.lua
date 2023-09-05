@@ -95,7 +95,6 @@ return {
 			})
 		end,
 	},
-	-- { "echasnovski/mini.files", version = false },
 	{
 		"stevearc/oil.nvim",
 		config = function()
