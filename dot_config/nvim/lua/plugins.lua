@@ -95,5 +95,23 @@ return {
 			})
 		end,
 	},
-	{ "echasnovski/mini.files", version = false },
+	-- { "echasnovski/mini.files", version = false },
+	{
+		"stevearc/oil.nvim",
+		config = function()
+			require("oil").setup()
+		end,
+	},
+	{
+		"echasnovski/mini.misc",
+		version = false,
+		lazy = false,
+		config = function()
+			local misc = require("mini.misc")
+			misc.setup({
+				make_global = { "setup_auto_root" },
+			})
+			misc.setup_auto_root({ ".git", "init.lua", "Makefile" })
+		end,
+	},
 }

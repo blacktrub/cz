@@ -87,4 +87,5 @@ vim.keymap.set("", "<leader>s", function()
 end, opts)
 
 map("n", ";", ":", opts)
-map("n", "-", ":lua MiniFiles.open()<CR>", {})
+-- map("n", "-", ":lua MiniFiles.open()<CR>", {})
+map("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })

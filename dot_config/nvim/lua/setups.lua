@@ -14,49 +14,49 @@ require("lualine").setup({
 require("nvim-web-devicons").get_icons()
 require("alpha").setup(require("alpha.themes.startify").opts)
 
-require("nvim-tree").setup({
-	disable_netrw = true,
-	hijack_netrw = true,
-	-- auto_close          = true,
-	open_on_tab = true,
-	hijack_cursor = false,
-	update_cwd = false,
-	hijack_directories = {
-		enable = true,
-		auto_open = true,
-	},
-	diagnostics = {
-		enable = false,
-		icons = {
-			hint = "",
-			info = "",
-			warning = "",
-			error = "",
-		},
-	},
-	update_focused_file = {
-		enable = false,
-		update_cwd = false,
-		ignore_list = {},
-	},
-	system_open = {
-		cmd = nil,
-		args = {},
-	},
-	filters = {
-		dotfiles = false,
-		custom = {},
-	},
-	view = {
-		width = 60,
-		hide_root_folder = false,
-		side = "left",
-		mappings = {
-			custom_only = false,
-			list = {},
-		},
-	},
-})
+-- require("nvim-tree").setup({
+-- 	disable_netrw = true,
+-- 	hijack_netrw = true,
+-- 	-- auto_close          = true,
+-- 	open_on_tab = true,
+-- 	hijack_cursor = false,
+-- 	update_cwd = false,
+-- 	hijack_directories = {
+-- 		enable = true,
+-- 		auto_open = true,
+-- 	},
+-- 	diagnostics = {
+-- 		enable = false,
+-- 		icons = {
+-- 			hint = "",
+-- 			info = "",
+-- 			warning = "",
+-- 			error = "",
+-- 		},
+-- 	},
+-- 	update_focused_file = {
+-- 		enable = false,
+-- 		update_cwd = false,
+-- 		ignore_list = {},
+-- 	},
+-- 	system_open = {
+-- 		cmd = nil,
+-- 		args = {},
+-- 	},
+-- 	filters = {
+-- 		dotfiles = false,
+-- 		custom = {},
+-- 	},
+-- 	view = {
+-- 		width = 60,
+-- 		hide_root_folder = false,
+-- 		side = "left",
+-- 		mappings = {
+-- 			custom_only = false,
+-- 			list = {},
+-- 		},
+-- 	},
+-- })
 
 require("toggleterm").setup({
 	open_mapping = [[<c-p>]],
@@ -178,13 +178,27 @@ require("hop").setup()
 require("luasnip.loaders.from_vscode").lazy_load({ paths = "~/.config/nvim/snippets" })
 require("mini.pairs").setup()
 require("hardtime").setup()
-require("mini.files").setup({
-	mappings = {
-		go_in_plus = "<CR>",
-	},
-	windows = {
-		width_focus = 100,
-		width_nofocus = 50,
-		width_preview = 100,
-	},
-})
+-- require("mini.files").setup({
+-- 	mappings = {
+-- 		go_in_plus = "<CR>",
+-- 	},
+-- 	windows = {
+-- 		width_focus = 100,
+-- 		width_nofocus = 50,
+-- 		width_preview = 100,
+-- 	},
+-- })
+
+-- Setup pwd when open nvim with PATH args
+if vim.fn.argc(-1) > 0 then
+	local path = vim.fn.argv(0)
+	if path:find("^oil://") then
+		path = path:gsub("^oil://", "")
+	end
+
+	if vim.fn.isdirectory(path) == 0 then
+		path = vim.fs.dirname(path)
+	end
+
+	vim.fn.chdir(path)
+end
