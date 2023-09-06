@@ -74,7 +74,7 @@ return {
 					["core.export.markdown"] = {},
 					["core.concealer"] = {
 						config = {
-							folds = false,
+							folds = true,
 							icon_preset = "diamond",
 						},
 					}, -- Adds pretty icons to your documents
