@@ -75,7 +75,7 @@ return {
 					["core.concealer"] = {
 						config = {
 							icon_preset = "diamond",
-							init_open_folds = "always",
+							init_open_folds = "never",
 						},
 					}, -- Adds pretty icons to your documents
 					["core.dirman"] = { -- Manages Neorg workspaces
