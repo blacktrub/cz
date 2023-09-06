@@ -74,8 +74,8 @@ return {
 					["core.export.markdown"] = {},
 					["core.concealer"] = {
 						config = {
-							folds = true,
 							icon_preset = "diamond",
+							init_open_folds = "always",
 						},
 					}, -- Adds pretty icons to your documents
 					["core.dirman"] = { -- Manages Neorg workspaces
