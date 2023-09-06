@@ -70,6 +70,8 @@ return {
 			require("neorg").setup({
 				load = {
 					["core.defaults"] = {}, -- Loads default behaviour
+					["core.export"] = {},
+					["core.export.markdown"] = {},
 					["core.concealer"] = {
 						config = {
 							folds = false,
