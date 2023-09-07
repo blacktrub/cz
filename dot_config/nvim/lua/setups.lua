@@ -177,7 +177,7 @@ require("hop").setup()
 
 require("luasnip.loaders.from_vscode").lazy_load({ paths = "~/.config/nvim/snippets" })
 require("mini.pairs").setup()
-require("hardtime").setup()
+-- require("hardtime").setup()
 
 -- Setup pwd when open nvim with PATH args
 if vim.fn.argc(-1) > 0 then
