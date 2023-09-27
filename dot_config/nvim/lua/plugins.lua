@@ -120,4 +120,11 @@ return {
 			misc.setup_auto_root({ ".git", "init.lua", "Makefile" })
 		end,
 	},
+	{
+		"stevearc/overseer.nvim",
+		opts = {},
+		config = function()
+			require("overseer").setup()
+		end,
+	},
 }
