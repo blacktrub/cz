@@ -124,7 +124,9 @@ return {
 		"stevearc/overseer.nvim",
 		opts = {},
 		config = function()
-			require("overseer").setup()
+			require("overseer").setup({
+				templates = { "builtin", "user.go_build" },
+			})
 		end,
 	},
 }
