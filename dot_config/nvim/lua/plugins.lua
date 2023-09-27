@@ -10,7 +10,10 @@ return {
 	"nvim-telescope/telescope.nvim",
 	"nvim-telescope/telescope-ui-select.nvim",
 	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
-	"neovim/nvim-lspconfig",
+	{
+		"neovim/nvim-lspconfig",
+		dev = true,
+	},
 	"terrortylor/nvim-comment",
 	"ojroques/nvim-lspfuzzy",
 	"junegunn/fzf",

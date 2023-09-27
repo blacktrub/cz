@@ -45,6 +45,9 @@ map("n", "<Space><Space>", ":wa<cr>", opts)
 map("v", ";rv", 'c<C-O>:set revins<CR><C-R>"<Esc>:set norevins<CR>', opts)
 
 map("n", "<leader>tt", "<cmd>TroubleToggle<CR>", opts)
+vim.keymap.set("", "<leader>tn", function()
+	require("trouble").next({ skip_groups = true, jump = true })
+end, opts)
 
 -- window motions remap
 -- map('n', '<C-h>', '<C-w>h', opts)

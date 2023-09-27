@@ -134,3 +134,12 @@ nvim_lsp.gopls.setup({
 	},
 	capabilities = capabilities,
 })
+
+nvim_lsp.brief.setup({
+	on_attach = lsp_attach,
+	flags = {
+		debounce_text_changes = 150,
+	},
+	capabilities = capabilities,
+})
+vim.lsp.set_log_level("debug")
