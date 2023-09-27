@@ -92,3 +92,6 @@ end, opts)
 map("n", ";", ":", opts)
 -- map("n", "-", ":lua MiniFiles.open()<CR>", {})
 map("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+
+map("n", "<leader>bb", '<cmd>OverseerRun<CR>', opts)
+map("n", "<leader>bt", '<cmd>OverseerToggle<CR>', opts)
