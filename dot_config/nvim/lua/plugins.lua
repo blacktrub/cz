@@ -136,4 +136,11 @@ return {
 			require("gotests").setup()
 		end,
 	},
+	{
+		"echasnovski/mini.nvim",
+		version = "*",
+		config = function()
+			require("mini.align").setup()
+		end,
+	},
 }
