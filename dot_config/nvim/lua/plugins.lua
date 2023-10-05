@@ -137,7 +137,7 @@ return {
 		end,
 	},
 	{
-		"echasnovski/mini.nvim",
+		"echasnovski/mini.align",
 		version = "*",
 		config = function()
 			require("mini.align").setup()
