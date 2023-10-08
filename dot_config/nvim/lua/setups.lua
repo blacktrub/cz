@@ -157,6 +157,9 @@ cmp.setup({
 		{ name = "nvim_lsp" },
 		{ name = "luasnip" },
 	},
+	confirmation = {
+		completeopt = "menu,menuone,noinsert",
+	},
 })
 
 require("nvim_comment").setup()
