@@ -154,10 +154,10 @@ cmp.setup({
 		end,
 	},
 	sources = {
-		{ name = "nvim_lsp" },
 		{ name = "luasnip" },
+		{ name = "nvim_lsp" },
 	},
-	confirmation = {
+	completion = {
 		completeopt = "menu,menuone,noinsert",
 	},
 })
