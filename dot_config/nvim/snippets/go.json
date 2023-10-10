@@ -284,5 +284,9 @@
   "errorf": {
     "prefix": "ef",
     "body": "fmt.Errorf(\"$1: %w\", err)"
+  },
+  "new function": {
+    "prefix": "fnew",
+    "body": "func New($1)$2 {\n\t$3\n}"
   }
 }
