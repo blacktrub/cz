@@ -20,6 +20,12 @@ return {
 	"junegunn/fzf.vim",
 	"marko-cerovac/material.nvim",
 	"bluz71/vim-nightfly-guicolors",
+	{
+		"bluz71/vim-nightfly-colors",
+		name = "nightfly",
+		lazy = false,
+		priority = 1000,
+	},
 	"bluz71/vim-moonfly-colors",
 	"folke/todo-comments.nvim",
 	"blacktrub/neovim-typer",
