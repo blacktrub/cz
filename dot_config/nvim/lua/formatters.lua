@@ -58,4 +58,4 @@ local nilaway = {
   }),
 }
 
-null_ls.register(nilaway)
+-- null_ls.register(nilaway)
