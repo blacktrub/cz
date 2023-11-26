@@ -131,7 +131,11 @@ return {
 		opts = {},
 		config = function()
 			require("overseer").setup({
-				templates = { "builtin", "user.go_build" },
+				templates = {
+					"builtin",
+					"user.go_build",
+					"user.avito_lint",
+				},
 			})
 		end,
 	},
