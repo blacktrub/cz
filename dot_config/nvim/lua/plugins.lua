@@ -134,6 +134,7 @@ return {
 				templates = {
 					"builtin",
 					"user.go_build",
+					"user.go_test",
 					"user.avito_lint",
 				},
 			})
