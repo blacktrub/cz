@@ -3,7 +3,7 @@ return {
 	builder = function()
 		return {
 			cmd = { "avito", "lint" },
-			components = { { "on_output_quickfix", open = true }, "default" },
+			components = { { "on_complete_notify" }, "default" },
 		}
 	end,
 	condition = {
