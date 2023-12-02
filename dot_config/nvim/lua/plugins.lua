@@ -154,7 +154,10 @@ return {
 		end,
 	},
 	{
-		"ThePrimeagen/harpoon",
+		-- TODO: return when UI width will be available to configure
+		-- "ThePrimeagen/harpoon",
+		"blacktrub/harpoon",
 		branch = "harpoon2",
+		dev = true,
 	},
 }
