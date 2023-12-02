@@ -61,11 +61,26 @@ end, opts)
 map("n", "gb", "<cmd>BlamerToggle<CR>", opts)
 
 -- harpoon
-map("n", "<leader>a", '<cmd>lua require("harpoon.mark").add_file()<CR>', opts)
-map("n", "<leader>l", '<cmd>lua require("harpoon.ui").toggle_quick_menu()<CR>', opts)
+-- NOTE: old harpoon
+-- map("n", "<leader>a", '<cmd>lua require("harpoon.mark").add_file()<CR>', opts)
+-- map("n", "<leader>l", '<cmd>lua require("harpoon.ui").toggle_quick_menu()<CR>', opts)
+-- for i = 1, 5 do
+-- 	map("n", "<leader>" .. i, '<cmd>:lua require("harpoon.ui").nav_file(' .. i .. ")<CR>", opts)
+-- end
 
+local harpoon = require("harpoon")
+harpoon:setup()
+
+vim.keymap.set("n", "<leader>a", function()
+	harpoon:list():append()
+end, opts)
+vim.keymap.set("n", "<leader>l", function()
+	harpoon.ui:toggle_quick_menu(harpoon:list())
+end, opts)
 for i = 1, 5 do
-	map("n", "<leader>" .. i, '<cmd>:lua require("harpoon.ui").nav_file(' .. i .. ")<CR>", opts)
+	vim.keymap.set("n", "<leader>" .. i, function()
+		harpoon:list():select(i)
+	end, opts)
 end
 
 local hop = require("hop")

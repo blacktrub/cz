@@ -42,7 +42,6 @@ return {
 	"rcarriga/nvim-dap-ui",
 	"mfussenegger/nvim-dap-python",
 	"leoluz/nvim-dap-go",
-	"ThePrimeagen/harpoon",
 	"APZelos/blamer.nvim",
 	"chentoast/marks.nvim",
 	"sindrets/diffview.nvim",
@@ -153,5 +152,9 @@ return {
 		config = function()
 			require("mini.align").setup()
 		end,
+	},
+	{
+		"ThePrimeagen/harpoon",
+		branch = "harpoon2",
 	},
 }
