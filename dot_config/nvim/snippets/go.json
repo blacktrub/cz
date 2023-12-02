@@ -241,5 +241,9 @@
   "new usecase": {
     "prefix": "ucn",
     "body": "type usecase struct {\n\t$3\n}\nfunc New() *usecase {\n\treturn &usecase{}\n}"
+  },
+  "generate mock": {
+    "prefix": "gmock",
+    "body": "go:generate mockgen -source ${GOFILE} -destination mocks/${GOFILE} -package mocks"
   }
 }
