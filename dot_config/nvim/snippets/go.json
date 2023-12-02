@@ -244,6 +244,6 @@
   },
   "generate mock": {
     "prefix": "gmock",
-    "body": "//go:generate mockgen -source ${GOFILE} -destination mocks/${GOFILE} -package mocks"
+    "body": "//go:generate mockgen -source \$\{GOFILE\} -destination mocks/\$\{GOFILE\} -package mocks"
   }
 }
