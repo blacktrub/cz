@@ -160,7 +160,4 @@ return {
 		branch = "harpoon2",
 		dev = true,
 	},
-	{
-		"karb94/neoscroll.nvim",
-	},
 }
