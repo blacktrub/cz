@@ -195,3 +195,7 @@ if vim.fn.argc(-1) > 0 then
 
 	vim.fn.chdir(path)
 end
+
+require("no-neck-pain").setup({
+	width = 100,
+})
