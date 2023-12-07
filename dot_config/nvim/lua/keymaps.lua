@@ -69,7 +69,12 @@ map("n", "gb", "<cmd>BlamerToggle<CR>", opts)
 -- end
 
 local harpoon = require("harpoon")
-harpoon:setup()
+harpoon:setup({
+	settings = {
+		ui_fallback_width = 69,
+		ui_width_ratio = 0.25,
+	},
+})
 
 vim.keymap.set("n", "<leader>a", function()
 	harpoon:list():append()

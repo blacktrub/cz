@@ -154,10 +154,11 @@ return {
 		end,
 	},
 	{
-		-- TODO: return when UI width will be available to configure
-		-- "ThePrimeagen/harpoon",
-		"blacktrub/harpoon",
+		"ThePrimeagen/harpoon",
 		branch = "harpoon2",
-		dev = true,
+	},
+	{
+		"shortcuts/no-neck-pain.nvim",
+		version = "*",
 	},
 }
