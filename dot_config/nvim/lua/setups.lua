@@ -197,5 +197,5 @@ if vim.fn.argc(-1) > 0 then
 end
 
 require("no-neck-pain").setup({
-	width = 100,
+	width = 180,
 })
