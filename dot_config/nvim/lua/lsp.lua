@@ -1,6 +1,7 @@
 require("neoconf").setup()
 
-local servers = { "gopls", "pyright", "spectral", "html", "dockerls", "tsserver", "lua_ls", "sqlls" }
+-- local servers = { "gopls", "pyright", "spectral", "html", "dockerls", "tsserver", "lua_ls", "sqlls" }
+local servers = { "gopls", "pyright", "spectral", "html", "dockerls", "tsserver", "lua_ls" }
 require("mason").setup()
 require("mason-lspconfig").setup({
 	ensure_installed = servers,
@@ -135,11 +136,11 @@ nvim_lsp.gopls.setup({
 	capabilities = capabilities,
 })
 
-nvim_lsp.brief.setup({
-	on_attach = lsp_attach,
-	flags = {
-		debounce_text_changes = 150,
-	},
-	capabilities = capabilities,
-})
-vim.lsp.set_log_level("debug")
+-- nvim_lsp.brief.setup({
+-- 	on_attach = lsp_attach,
+-- 	flags = {
+-- 		debounce_text_changes = 150,
+-- 	},
+-- 	capabilities = capabilities,
+-- })
+-- vim.lsp.set_log_level("debug")
