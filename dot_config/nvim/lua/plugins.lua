@@ -35,7 +35,7 @@ return {
 	"folke/neodev.nvim",
 	"williamboman/mason.nvim",
 	"williamboman/mason-lspconfig.nvim",
-	"jose-elias-alvarez/null-ls.nvim",
+	"nvimtools/none-ls.nvim",
 	"jay-babu/mason-null-ls.nvim",
 	"jay-babu/mason-nvim-dap.nvim",
 	"mfussenegger/nvim-dap",
