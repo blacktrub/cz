@@ -104,7 +104,6 @@ return {
 					},
 				},
 			})
-			vim.o.conceallevel = 1
 		end,
 	},
 	{
