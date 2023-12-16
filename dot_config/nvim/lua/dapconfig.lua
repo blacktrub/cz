@@ -32,7 +32,6 @@ dap.configurations.python = {
 	},
 }
 
-
 require("dap-go").setup({
 	dap_configurations = {
 		{
@@ -45,8 +44,14 @@ require("dap-go").setup({
 		{
 			type = "go",
 			request = "launch",
-			name = "Run PP Debug",
+			name = "Run Service Debug",
 			program = vim.fn.getcwd() .. "/cmd/service/main.go",
+		},
+		{
+			type = "go",
+			request = "launch",
+			name = "Run Worker Debug",
+			program = vim.fn.getcwd() .. "/cmd/worker/dvizh/step/main.go",
 		},
 		{
 			type = "go",
