@@ -201,4 +201,10 @@ require("no-neck-pain").setup({
 	autocmds = {
 		enableOnVimEnter = true,
 	},
+	integrations = {
+		NvimDAPUI = {
+			position = "none",
+			reopen = true,
+		},
+	},
 })
