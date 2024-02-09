@@ -160,4 +160,5 @@ return {
 		"shortcuts/no-neck-pain.nvim",
 		version = "*",
 	},
+	{ "chrisgrieser/nvim-dr-lsp" },
 }

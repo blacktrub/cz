@@ -8,6 +8,10 @@ require("lualine").setup({
 				path = 1, -- 0 = just filename, 1 = relative path, 2 = absolute path
 			},
 		},
+		lualine_c = {
+			{ require("dr-lsp").lspCount },
+			{ require("dr-lsp").lspProgress },
+		},
 	},
 })
 
