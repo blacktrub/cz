@@ -167,7 +167,7 @@ return {
 			require("gitlinker").setup({
 				router = {
 					browse = {
-						["^stash%.msk%.avito%.ru"] = require("gitlinker.routers").github_browse,
+						["^stash%.msk%.avito%.ru"] = require("gitlinker.routers").bitbucket_browse,
 					},
 				},
 			})
