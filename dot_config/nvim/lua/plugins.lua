@@ -164,7 +164,13 @@ return {
 	{
 		"linrongbin16/gitlinker.nvim",
 		config = function()
-			require("gitlinker").setup()
+			require("gitlinker").setup({
+				router = {
+					browse = {
+						["^stash%.msk%.avito%.ru"] = require("gitlinker.routers").github_browse,
+					},
+				},
+			})
 		end,
 	},
 }
