@@ -161,4 +161,10 @@ return {
 		version = "*",
 	},
 	{ "chrisgrieser/nvim-dr-lsp" },
+	{
+		"linrongbin16/gitlinker.nvim",
+		config = function()
+			require("gitlinker").setup()
+		end,
+	},
 }
