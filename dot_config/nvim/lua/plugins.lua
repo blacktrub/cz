@@ -173,4 +173,13 @@ return {
 			})
 		end,
 	},
+	{
+		"nvim-pack/nvim-spectre",
+		config = function()
+			require("spectre").setup()
+			vim.keymap.set("n", "<leader>ss", '<cmd>lua require("spectre").toggle()<CR>', {
+				desc = "Toggle Spectre",
+			})
+		end,
+	},
 }
