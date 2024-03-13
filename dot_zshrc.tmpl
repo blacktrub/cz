@@ -143,3 +143,5 @@ alias obs="flatpak run com.obsproject.Studio"
 eval "$(tmuxifier init -)"
 export TMUXIFIER_LAYOUT_PATH="$HOME/.tmux-layouts"
 alias ts="tmuxifier s"
+
+gcmsgg() {gcmsg "$(git symbolic-ref --short HEAD) $@"}
