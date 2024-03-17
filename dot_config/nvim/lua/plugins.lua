@@ -182,4 +182,8 @@ return {
 			})
 		end,
 	},
+	{
+		"ggandor/leap.nvim",
+		lazy = false,
+	},
 }
