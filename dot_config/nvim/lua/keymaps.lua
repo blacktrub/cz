@@ -108,7 +108,8 @@ end
 -- vim.keymap.set("", "<leader>s", function()
 -- 	hop.hint_char1()
 -- end, opts)
-vim.keymap.set({ "n", "x", "o" }, "s", "<Plug>(leap)")
+vim.keymap.set({ "n", "x", "o" }, "s", "<Plug>(leap-forward)")
+vim.keymap.set({ "n", "x", "o" }, "S", "<Plug>(leap-backward)")
 vim.keymap.set({ "n", "x", "o" }, "<leader>s", "<Plug>(leap-from-window)")
 
 map("n", ";", ":", opts)
