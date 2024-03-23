@@ -187,4 +187,7 @@ return {
 		"ggandor/leap.nvim",
 		lazy = false,
 	},
+	{
+		"nvim-neotest/nvim-nio",
+	},
 }
