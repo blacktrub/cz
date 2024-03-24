@@ -36,7 +36,12 @@ return {
 	"folke/neodev.nvim",
 	"williamboman/mason.nvim",
 	"williamboman/mason-lspconfig.nvim",
-	"nvimtools/none-ls.nvim",
+	{
+		"nvimtools/none-ls.nvim",
+		dependencies = {
+			"nvimtools/none-ls-extras.nvim",
+		},
+	},
 	"jay-babu/mason-null-ls.nvim",
 	"jay-babu/mason-nvim-dap.nvim",
 	"mfussenegger/nvim-dap",
