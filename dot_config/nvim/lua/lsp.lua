@@ -136,13 +136,32 @@ nvim_lsp.gopls.setup({
 	capabilities = capabilities,
 })
 
-nvim_lsp.brief.setup({
-	on_attach = lsp_attach,
-	flags = {
-		debounce_text_changes = 150,
-	},
-	capabilities = capabilities,
-})
+-- nvim_lsp.brief.setup({
+-- 	on_attach = lsp_attach,
+-- 	flags = {
+-- 		debounce_text_changes = 150,
+-- 	},
+-- 	capabilities = capabilities,
+-- })
+
+-- add brief-ls
+local configs = require("lspconfig.configs")
+local util = require("lspconfig.util")
+if not configs.briefls then
+	configs.briefls = {
+		default_config = {
+			cmd = { "brief-lsp" },
+			filetypes = { "brief" },
+			root_dir = function(fname)
+				util.find_git_ancestor(fname)
+			end,
+			single_file_support = true,
+		},
+		settings = {},
+	}
+end
+
+-- setup brief-ls
 nvim_lsp.briefls.setup({
 	on_attach = lsp_attach,
 	flags = {
@@ -150,4 +169,5 @@ nvim_lsp.briefls.setup({
 	},
 	capabilities = capabilities,
 })
+
 -- vim.lsp.set_log_level("debug")

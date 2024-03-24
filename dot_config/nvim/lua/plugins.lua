@@ -11,9 +11,9 @@ return {
 	"nvim-telescope/telescope-ui-select.nvim",
 	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
 	{
-		"blacktrub/nvim-lspconfig",
+		"neovim/nvim-lspconfig",
 		-- dev = true,
-		branch = "brieflang",
+		-- branch = "brieflang",
 	},
 	"terrortylor/nvim-comment",
 	"ojroques/nvim-lspfuzzy",
