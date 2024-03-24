@@ -143,4 +143,4 @@ nvim_lsp.brief.setup({
 	},
 	capabilities = capabilities,
 })
-vim.lsp.set_log_level("debug")
+-- vim.lsp.set_log_level("debug")
