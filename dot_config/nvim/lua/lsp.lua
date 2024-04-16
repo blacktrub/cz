@@ -144,13 +144,13 @@ nvim_lsp.gopls.setup({
 -- 	capabilities = capabilities,
 -- })
 
--- add brief-ls
+-- add briefls
 local configs = require("lspconfig.configs")
 local util = require("lspconfig.util")
 if not configs.briefls then
 	configs.briefls = {
 		default_config = {
-			cmd = { "brief-lsp" },
+			cmd = { "briefls" },
 			filetypes = { "brief" },
 			root_dir = function(fname)
 				util.find_git_ancestor(fname)
@@ -161,7 +161,7 @@ if not configs.briefls then
 	}
 end
 
--- setup brief-ls
+-- setup briefls
 nvim_lsp.briefls.setup({
 	on_attach = lsp_attach,
 	flags = {
