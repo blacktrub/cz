@@ -153,7 +153,7 @@ if not configs.briefls then
 			cmd = { "briefls" },
 			filetypes = { "brief" },
 			root_dir = function(fname)
-				util.find_git_ancestor(fname)
+				return util.root_pattern("brief", ".git")(fname)
 			end,
 			single_file_support = true,
 		},
