@@ -145,3 +145,9 @@ export TMUXIFIER_LAYOUT_PATH="$HOME/.tmux-layouts"
 alias ts="tmuxifier s"
 
 gcmsgg() {gcmsg "$(git symbolic-ref --short HEAD) $@"}
+
+{{- if eq .chezmoi.hostname "macbook-work" }}
+autoload -Uz compinit
+compinit
+source <(avito completion zsh)
+{{- end }}
