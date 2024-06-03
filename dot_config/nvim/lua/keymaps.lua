@@ -73,6 +73,8 @@ harpoon:setup({
 	settings = {
 		ui_fallback_width = 69,
 		ui_width_ratio = 0.25,
+		save_on_toggle = true,
+		-- sync_on_ui_close = true,
 	},
 })
 
@@ -118,3 +120,10 @@ map("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
 map("n", "<leader>bb", "<cmd>OverseerRun<CR>", opts)
 map("n", "<leader>bt", "<cmd>OverseerToggle<CR>", opts)
+
+-- local set = vim.keymap.set
+-- Basic movement keybinds, these make navigating splits easy for me
+-- set("n", "<c-j>", "<c-w><c-j>")
+-- set("n", "<c-k>", "<c-w><c-k>")
+-- set("n", "<c-l>", "<c-w><c-l>")
+-- set("n", "<c-h>", "<c-w><c-h>")

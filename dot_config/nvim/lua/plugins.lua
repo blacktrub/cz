@@ -15,7 +15,7 @@ return {
 		-- dev = true,
 		-- branch = "brieflang",
 	},
-	"terrortylor/nvim-comment",
+	-- "terrortylor/nvim-comment",
 	"ojroques/nvim-lspfuzzy",
 	"junegunn/fzf",
 	"junegunn/fzf.vim",
@@ -194,5 +194,10 @@ return {
 	},
 	{
 		"nvim-neotest/nvim-nio",
+	},
+	{
+		"catlee/pull_diags.nvim",
+		event = "LspAttach",
+		opts = {},
 	},
 }

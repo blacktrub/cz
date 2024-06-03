@@ -81,6 +81,7 @@ vim.keymap.set("n", "<C-f>", function()
 end, { noremap = true, silent = true })
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.workspace.didChangeWatchedFiles.dynamicRegistration = true
 capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
 
 for i = 1, #servers do
@@ -120,9 +121,9 @@ nvim_lsp.lua_ls.setup({
 
 nvim_lsp.gopls.setup({
 	on_attach = lsp_attach,
-	flags = {
-		debounce_text_changes = 150,
-	},
+	-- flags = {
+	-- 	debounce_text_changes = 150,
+	-- },
 	settings = {
 		gopls = {
 			buildFlags = { "-tags=integration" },
@@ -134,28 +135,36 @@ nvim_lsp.gopls.setup({
 		},
 	},
 	capabilities = capabilities,
+	-- capabilities = {
+	-- 	workspace = {
+	-- 		didChangeWatchedFiles = {
+	-- 			dynamicRegistration = true,
+	-- 		},
+	-- 	},
+	-- },
 })
-
--- nvim_lsp.brief.setup({
--- 	on_attach = lsp_attach,
--- 	flags = {
--- 		debounce_text_changes = 150,
--- 	},
--- 	capabilities = capabilities,
--- })
 
 -- add briefls
 local configs = require("lspconfig.configs")
 local util = require("lspconfig.util")
+
 if not configs.briefls then
 	configs.briefls = {
 		default_config = {
-			cmd = { "briefls" },
+			-- cmd = { "briefls" },
+			cmd = { "nc", "127.0.0.1", "8833" },
 			filetypes = { "brief" },
 			root_dir = function(fname)
-				return util.root_pattern("brief", ".git")(fname)
+				return util.root_pattern(".git")(fname)
 			end,
 			single_file_support = true,
+			capabilities = {
+				workspace = {
+					didChangeWatchedFiles = {
+						dynamicRegistration = true,
+					},
+				},
+			},
 		},
 		settings = {},
 	}
