@@ -165,10 +165,10 @@ cmp.setup({
 		{ name = "nvim_lsp" },
 		{ name = "path" },
 	},
-	completion = {
-		-- completeopt = "menu,menuone,noselect",
-		completeopt = "menu,menuone",
-	},
+	-- completion = {
+	-- completeopt = "menu,menuone,noselect",
+	-- completeopt = "menu,menuone",
+	-- },
 })
 
 -- require("nvim_comment").setup()

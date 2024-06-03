@@ -34,7 +34,6 @@ vim.o.swapfile = false
 
 -- vim.opt.scrolloff = 999
 
--- vim.o.completeopt = "menuone,noselect"
-
+vim.o.completeopt = "menu,menuone,noselect"
 
 vim.diagnostic.config({ virtual_text = false })
