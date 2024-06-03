@@ -166,7 +166,8 @@ cmp.setup({
 		{ name = "path" },
 	},
 	completion = {
-		completeopt = "menu,menuone,noselect",
+		-- completeopt = "menu,menuone,noselect",
+		completeopt = "menu,menuone",
 	},
 })
 
