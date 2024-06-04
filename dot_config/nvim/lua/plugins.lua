@@ -32,7 +32,10 @@ return {
 	"blacktrub/neovim-typer",
 	"kevinhwang91/nvim-bqf",
 	"bhurlow/vim-parinfer",
-	"folke/trouble.nvim",
+	{
+		"folke/trouble.nvim",
+		cmd = "Trouble",
+	},
 	"folke/neodev.nvim",
 	"williamboman/mason.nvim",
 	"williamboman/mason-lspconfig.nvim",
