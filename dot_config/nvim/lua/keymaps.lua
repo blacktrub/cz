@@ -79,7 +79,7 @@ harpoon:setup({
 })
 
 vim.keymap.set("n", "<leader>a", function()
-	harpoon:list():append()
+	harpoon:list():add()
 end, opts)
 vim.keymap.set("n", "<leader>l", function()
 	harpoon.ui:toggle_quick_menu(harpoon:list())
