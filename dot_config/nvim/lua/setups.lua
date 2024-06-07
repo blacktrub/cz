@@ -219,4 +219,4 @@ require("no-neck-pain").setup({
 })
 
 local leap = require("leap")
-leap.opts.max_phase_one_targets = 2
+-- leap.opts.max_phase_one_targets = 2
