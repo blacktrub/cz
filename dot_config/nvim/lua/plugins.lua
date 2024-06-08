@@ -61,6 +61,7 @@ return {
 	{ "blacktrub/stay-centered.nvim" },
 	{ "echasnovski/mini.move", version = "*" },
 	{ "echasnovski/mini.splitjoin", version = "*" },
+	{ "echasnovski/mini.ai", version = "*" },
 	{ "blacktrub/telescope-godoc.nvim", dev = true },
 	{ "phaazon/hop.nvim", branch = "v2" },
 	{
