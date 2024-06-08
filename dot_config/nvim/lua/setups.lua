@@ -182,6 +182,7 @@ require("marks").setup()
 
 require("mini.move").setup()
 require("mini.splitjoin").setup()
+require("mini.ai").setup()
 
 require("godoc")
 
