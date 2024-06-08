@@ -22,6 +22,7 @@
   "mason-nvim-dap.nvim": { "branch": "main", "commit": "67210c0e775adec55de9826b038e8b62de554afc" },
   "mason.nvim": { "branch": "main", "commit": "0950b15060067f752fde13a779a994f59516ce3d" },
   "material.nvim": { "branch": "main", "commit": "b6407868026175fda8b2e3dfdc524a3c60222a23" },
+  "mini.ai": { "branch": "main", "commit": "ee9446a17c160aba6a04ff22097389c41872c878" },
   "mini.align": { "branch": "main", "commit": "f845218c5fea89e49074e48270dc5e1b9511a0f9" },
   "mini.misc": { "branch": "main", "commit": "f066a0ea123b39f2308d7cd6053cde70d15329cb" },
   "mini.move": { "branch": "main", "commit": "251d541a8ab745e81295a53c128829cb2bff18e3" },
@@ -61,7 +62,7 @@
   "todo-comments.nvim": { "branch": "main", "commit": "70a93ce66083699571adc361166504b03cc39c2b" },
   "toggleterm.nvim": { "branch": "main", "commit": "fee58a0473fd92b28c34f8f724e4918b15ba30a3" },
   "tokyonight.nvim": { "branch": "main", "commit": "7e5ef71a103e7de5fe6c05f5d6ab97d1640f08cf" },
-  "trouble.nvim": { "branch": "main", "commit": "b5181b65912c704d5378f8fe6889924f0182c357" },
+  "trouble.nvim": { "branch": "main", "commit": "915179759c9459b69faae90a38da6fc1ca6b90d7" },
   "vim-moonfly-colors": { "branch": "master", "commit": "522514d6325373c779ec38649059279693d5af9a" },
   "vim-nightfly-guicolors": { "branch": "master", "commit": "06c4ee680519f01ee6e61b891647feefc72da42e" },
   "vim-parinfer": { "branch": "master", "commit": "a5490e430452a749a3ad665ebae54392d9657414" }
