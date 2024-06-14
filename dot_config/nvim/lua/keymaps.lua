@@ -123,7 +123,7 @@ map("n", "<leader>bt", "<cmd>OverseerToggle<CR>", opts)
 
 vim.cmd("let g:zellij_navigator_no_default_mappings = 1")
 local set = vim.keymap.set
-set("n", "<M-j>", "<cmd>ZellijNavigateLeft<CR>")
-set("n", "<M-k>", "<cmd>ZellijNavigateDown<CR>")
-set("n", "<M-l>", "<cmd>ZellijNavigateUp<CR>")
-set("n", "<M-h>", "<cmd>ZellijNavigateRight<CR>")
+map("n", "<M-j>", "<cmd>ZellijNavigateLeft<CR>", opts)
+map("n", "<M-k>", "<cmd>ZellijNavigateDown<CR>", opts)
+map("n", "<M-l>", "<cmd>ZellijNavigateUp<CR>", opts)
+map("n", "<M-h>", "<cmd>ZellijNavigateRight<CR>", opts)
