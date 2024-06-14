@@ -65,5 +65,6 @@
   "trouble.nvim": { "branch": "main", "commit": "915179759c9459b69faae90a38da6fc1ca6b90d7" },
   "vim-moonfly-colors": { "branch": "master", "commit": "522514d6325373c779ec38649059279693d5af9a" },
   "vim-nightfly-guicolors": { "branch": "master", "commit": "06c4ee680519f01ee6e61b891647feefc72da42e" },
-  "vim-parinfer": { "branch": "master", "commit": "a5490e430452a749a3ad665ebae54392d9657414" }
+  "vim-parinfer": { "branch": "master", "commit": "a5490e430452a749a3ad665ebae54392d9657414" },
+  "zellij.vim": { "branch": "main", "commit": "97006b08342971fdee961a87491884ac4fec9d1d" }
 }
