@@ -121,8 +121,9 @@ map("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 map("n", "<leader>bb", "<cmd>OverseerRun<CR>", opts)
 map("n", "<leader>bt", "<cmd>OverseerToggle<CR>", opts)
 
+vim.cmd("let g:zellij_navigator_no_default_mappings = 1")
 local set = vim.keymap.set
-set("n", "<M-j>", ":ZellijNavigateLeft")
-set("n", "<M-k>", ":ZellijNavigateDown")
-set("n", "<M-l>", ":ZellijNavigateUp")
-set("n", "<M-h>", ":ZellijNavigateRight")
+set("n", "<M-j>", "<cmd>ZellijNavigateLeft<CR>")
+set("n", "<M-k>", "<cmd>ZellijNavigateDown<CR>")
+set("n", "<M-l>", "<cmd>ZellijNavigateUp<CR>")
+set("n", "<M-h>", "<cmd>ZellijNavigateRight<CR>")
