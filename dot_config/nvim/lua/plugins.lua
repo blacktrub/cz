@@ -235,7 +235,7 @@ return {
 		config = function()
 			require("ai-codegen-neovim").setup({
 				address_url = "http://llm-manager.k.avito.ru/",
-				api_key = "<API_KEY>",
+				api_key = "{{ gopass "$websites/ai/ai" }}",
 			})
 		end,
 	},
