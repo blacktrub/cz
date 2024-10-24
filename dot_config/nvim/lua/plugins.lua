@@ -228,4 +228,15 @@ return {
 	-- 	lazy = false,
 	-- },
 	"mechatroner/rainbow_csv",
+	{
+		url = "ssh://git@stash.msk.avito.ru:7999/ds/ai-codegen-neovim.git",
+		name = "ai-codegen-neovim",
+		lazy = false,
+		config = function()
+			require("ai-codegen-neovim").setup({
+				address_url = "http://llm-manager.k.avito.ru/",
+				api_key = "<API_KEY>",
+			})
+		end,
+	},
 }
