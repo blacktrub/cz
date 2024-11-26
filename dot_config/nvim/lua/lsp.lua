@@ -151,8 +151,8 @@ local util = require("lspconfig.util")
 if not configs.briefls then
 	configs.briefls = {
 		default_config = {
-			-- cmd = { "briefls" },
-			cmd = { "nc", "127.0.0.1", "8833" },
+			cmd = { "briefls" },
+			-- cmd = { "nc", "127.0.0.1", "8833" },
 			filetypes = { "brief" },
 			root_dir = function(fname)
 				return util.root_pattern(".git")(fname)
