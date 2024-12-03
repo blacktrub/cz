@@ -151,8 +151,8 @@ local util = require("lspconfig.util")
 if not configs.briefls then
 	configs.briefls = {
 		default_config = {
-			cmd = { "briefls" },
-			-- cmd = { "nc", "127.0.0.1", "8833" },
+			-- cmd = { "briefls" },
+			cmd = { "nc", "127.0.0.1", "8833" },
 			filetypes = { "brief" },
 			root_dir = function(fname)
 				return util.root_pattern(".git")(fname)
@@ -179,4 +179,25 @@ nvim_lsp.briefls.setup({
 	capabilities = capabilities,
 })
 
--- vim.lsp.set_log_level("debug")
+vim.lsp.set_log_level("debug")
+
+
+	-- aicodegen_lsp.get_completions(function(err, result)
+	-- 	refresh_lualine()
+	-- 	if err ~= nil then
+	-- 		vim.notify("[AICODEGEN] " .. err.message, vim.log.levels.ERROR)
+	-- 		return
+	-- 	end
+	--
+	-- 	local choices = aicodegen_lsp.extract_generation(result.choices)
+	-- 	if #choices == 0 then
+	-- 		return
+	-- 	end
+	--
+	-- 	local first = choices[1]
+	-- 	local lines = util.split_str(first, "\n")
+	-- 	clear_preview()
+	-- 	set_virt_text(lines)
+	-- 	M.suggestion = lines
+	-- 	vim.keymap.set("i", config.get().accept_keymap, M.accept_suggestion, {})
+	-- end)
