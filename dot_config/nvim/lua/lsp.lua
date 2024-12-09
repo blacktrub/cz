@@ -1,7 +1,7 @@
 require("neoconf").setup()
 
 -- local servers = { "gopls", "pyright", "spectral", "html", "dockerls", "tsserver", "lua_ls", "sqlls" }
-local servers = { "gopls", "pyright", "spectral", "html", "dockerls", "tsserver", "lua_ls", "intelephense" }
+local servers = { "gopls", "pyright", "spectral", "html", "dockerls", "ts_ls", "lua_ls", "intelephense" }
 require("mason").setup()
 require("mason-lspconfig").setup({
 	ensure_installed = servers,
