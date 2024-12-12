@@ -179,7 +179,7 @@ nvim_lsp.briefls.setup({
 	capabilities = capabilities,
 })
 
-vim.lsp.set_log_level("debug")
+-- vim.lsp.set_log_level("debug")
 
 
 	-- aicodegen_lsp.get_completions(function(err, result)
