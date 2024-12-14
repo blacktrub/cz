@@ -126,3 +126,6 @@ map("n", "<leader>bt", "<cmd>OverseerToggle<CR>", opts)
 -- vim.cmd("noremap <M-h> :ZellijNavigateRight<CR>")
 -- map("n", "<M-j>", "<cmd>ZellijNavigateLeft<CR>", {})
 -- map("n", "<M-l>", "<cmd>ZellijNavigateRight<CR>", {})
+
+map("n", "<leader>o", "o<Esc>k", opts)
+map("n", "<leader>O", "O<Esc>j", opts)
