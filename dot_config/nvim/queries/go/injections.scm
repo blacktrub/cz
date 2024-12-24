@@ -106,3 +106,15 @@
    (#lua-match? @injection.content "^`[\n|\t| ]*\{.*\}[\n|\t| ]*`$")
    (#offset! @injection.content 0 1 0 -1)
    (#set! injection.language "json")))
+
+; Variables ending in "Sql" and "SQL"
+(short_var_declaration
+  left: (expression_list
+    (identifier) @_left (#match? @_left "(Sql|SQL)$")
+  )
+  right: (expression_list
+    (raw_string_literal) @injection.content
+    (#set! injection.language "sql")
+  )
+)
+
