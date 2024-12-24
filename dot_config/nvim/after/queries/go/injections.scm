@@ -100,3 +100,9 @@
   name: ((identifier) @_const(#lua-match? @_const ".*[J|j]son.*"))
   value: (expression_list (raw_string_literal) @injection.content
    (#set! injection.language "json")))
+
+(short_var_declaration
+    left: (expression_list
+            (identifier) @_id (#match? @_id "sql"))
+    right: (expression_list
+             (raw_string_literal) @sql (#offset! @sql 0 1 0 -1))
