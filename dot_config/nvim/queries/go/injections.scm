@@ -108,7 +108,7 @@
    (#set! injection.language "json")))
 
 ; Variables ending in "Sql" and "SQL"
-(short_var_declaration
+(const_declaration
   left: (expression_list
     (identifier) @_left (#match? @_left "(Sql|SQL)$")
   )
