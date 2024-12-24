@@ -13,3 +13,4 @@
   (type_spec
     name: (type_identifier) @name
     type: [(struct_type) (interface_type)] @type)) @start
+
