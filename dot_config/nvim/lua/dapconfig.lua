@@ -58,12 +58,13 @@ require("dap-go").setup({
 			name = "Debug test Integration",
 			request = "launch",
 			mode = "test",
-			program = "${file}",
-			args = { "-test.tags", "integration" },
+			-- program = "${file}",
+			program = vim.fn.getcwd() .. "/integration_tests/tests",
 		},
 	},
 	delve = {
 		initialize_timeout_sec = 20,
+		build_flags = { "-tags=integration" },
 		port = "${port}",
 	},
 })

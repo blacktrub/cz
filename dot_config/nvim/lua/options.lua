@@ -21,7 +21,7 @@ vim.opt.hidden = true
 vim.opt.number = true -- show line number
 vim.opt.showcmd = true -- show command in bottom bar
 vim.opt.cursorline = true -- highlight current line
-vim.opt.colorcolumn = "100" -- highlight current line
+vim.opt.colorcolumn = "0" -- highlight current line
 --vim.opt.cursorline               -- highlight current line
 --vim.opt.wildmenu                 -- visual autocomplete for command menu
 vim.opt.showmatch = true -- highlight matching brace
