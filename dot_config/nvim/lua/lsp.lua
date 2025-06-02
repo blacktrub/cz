@@ -77,7 +77,7 @@ local lsp_attach = function(client, bufnr)
 end
 
 vim.keymap.set("n", "<C-f>", function()
-	vim.lsp.buf.format()
+	vim.lsp.buf.format({ timeout = 2000 })
 end, { noremap = true, silent = true })
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
