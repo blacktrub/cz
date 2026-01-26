@@ -16,7 +16,7 @@ local sign_cfg = {
 	floating_window = false,
 }
 
-local nvim_lsp = require("lspconfig")
+-- local nvim_lsp = require("lspconfig")
 local lsp_attach = function(client, bufnr)
 	local function buf_set_keymap(...)
 		vim.api.nvim_buf_set_keymap(bufnr, ...)
@@ -94,32 +94,41 @@ for i = 1, #servers do
 		goto continue
 	end
 
-	nvim_lsp[servers[i]].setup({
+	vim.lsp.config(servers[i], {
 		on_attach = lsp_attach,
 		flags = {
 			debounce_text_changes = 150,
 		},
 		capabilities = capabilities,
 	})
+	vim.lsp.enable(servers[i])
+
+	--nvim_lsp[servers[i]].setup({
+	--	on_attach = lsp_attach,
+	--	flags = {
+	--		debounce_text_changes = 150,
+	--	},
+	--	capabilities = capabilities,
+	--})
 	::continue::
 end
 
-nvim_lsp.lua_ls.setup({
-	settings = {
-		Lua = {
-			completion = {
-				callSnippet = "Replace",
-			},
-		},
-	},
-	on_attach = lsp_attach,
-	flags = {
-		debounce_text_changes = 150,
-	},
-	capabilities = capabilities,
-})
+-- vim.lsp.config.lua_ls.setup({
+-- 	settings = {
+-- 		Lua = {
+-- 			completion = {
+-- 				callSnippet = "Replace",
+-- 			},
+-- 		},
+-- 	},
+-- 	on_attach = lsp_attach,
+-- 	flags = {
+-- 		debounce_text_changes = 150,
+-- 	},
+-- 	capabilities = capabilities,
+-- })
 
-nvim_lsp.gopls.setup({
+vim.lsp.config("gopls",{
 	on_attach = lsp_attach,
 	-- flags = {
 	-- 	debounce_text_changes = 150,
@@ -143,6 +152,7 @@ nvim_lsp.gopls.setup({
 	-- 	},
 	-- },
 })
+vim.lsp.enable("gopls")
 
 -- add briefls
 local configs = require("lspconfig.configs")
@@ -171,41 +181,29 @@ if not configs.briefls then
 end
 
 -- setup briefls
-nvim_lsp.briefls.setup({
+vim.lsp.config("briefls", {
 	on_attach = lsp_attach,
 	flags = {
 		debounce_text_changes = 150,
 	},
 	capabilities = capabilities,
-	init_options = {
-		-- auth = {
-		-- 	{
-		-- 		provider = "paas-api",
-		-- 		token = "token",
-		-- 		expires_in = 100,
-		-- 	},
-		-- },
-	},
 })
+vim.lsp.enable("briefls")
+-- nvim_lsp.briefls.setup({
+-- 	on_attach = lsp_attach,
+-- 	flags = {
+-- 		debounce_text_changes = 150,
+-- 	},
+-- 	capabilities = capabilities,
+-- 	init_options = {
+-- 		-- auth = {
+-- 		-- 	{
+-- 		-- 		provider = "paas-api",
+-- 		-- 		token = "token",
+-- 		-- 		expires_in = 100,
+-- 		-- 	},
+-- 		-- },
+-- 	},
+-- })
 
 -- vim.lsp.set_log_level("debug")
-
--- aicodegen_lsp.get_completions(function(err, result)
--- 	refresh_lualine()
--- 	if err ~= nil then
--- 		vim.notify("[AICODEGEN] " .. err.message, vim.log.levels.ERROR)
--- 		return
--- 	end
---
--- 	local choices = aicodegen_lsp.extract_generation(result.choices)
--- 	if #choices == 0 then
--- 		return
--- 	end
---
--- 	local first = choices[1]
--- 	local lines = util.split_str(first, "\n")
--- 	clear_preview()
--- 	set_virt_text(lines)
--- 	M.suggestion = lines
--- 	vim.keymap.set("i", config.get().accept_keymap, M.accept_suggestion, {})
--- end)
