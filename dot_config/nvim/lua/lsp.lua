@@ -1,6 +1,6 @@
 require("neoconf").setup()
 
-local servers = { "gopls", "spectral", "html", "dockerls", "ts_ls", "lua_ls", "intelephense" }
+local servers = { "gopls", "spectral", "html", "dockerls", "ts_ls", "lua_ls", "intelephense", "pyright" }
 require("mason").setup()
 require("mason-lspconfig").setup({
 	ensure_installed = servers,
@@ -188,7 +188,6 @@ vim.lsp.config("briefls", {
 	capabilities = capabilities,
 })
 vim.lsp.enable("briefls")
-vim.lsp.enable("basedpyright")
 -- nvim_lsp.briefls.setup({
 -- 	on_attach = lsp_attach,
 -- 	flags = {
