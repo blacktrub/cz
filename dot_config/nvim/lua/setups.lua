@@ -186,7 +186,7 @@ require("mini.ai").setup()
 
 require("godoc")
 
-require("hop").setup()
+--require("hop").setup()
 
 require("luasnip.loaders.from_vscode").lazy_load({ paths = "~/.config/nvim/snippets" })
 require("mini.pairs").setup()
