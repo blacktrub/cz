@@ -127,7 +127,7 @@ end
 -- 	capabilities = capabilities,
 -- })
 
-vim.lsp.config("gopls",{
+vim.lsp.config("gopls", {
 	on_attach = lsp_attach,
 	-- flags = {
 	-- 	debounce_text_changes = 150,
@@ -153,40 +153,35 @@ vim.lsp.config("gopls",{
 })
 vim.lsp.enable("gopls")
 
--- add briefls
-local configs = require("lspconfig.configs")
-local util = require("lspconfig.util")
-
-if not configs.briefls then
-	configs.briefls = {
-		default_config = {
-			cmd = { "briefls" },
-			-- cmd = { "nc", "127.0.0.1", "8833" },
-			filetypes = { "brief" },
-			root_dir = function(fname)
-				return util.root_pattern(".git")(fname)
-			end,
-			single_file_support = true,
-			capabilities = {
-				workspace = {
-					didChangeWatchedFiles = {
-						dynamicRegistration = true,
-					},
-				},
-			},
-		},
-		settings = {},
-	}
-end
-
 -- setup briefls
 vim.lsp.config("briefls", {
 	on_attach = lsp_attach,
 	flags = {
 		debounce_text_changes = 150,
 	},
-	capabilities = capabilities,
+	cmd = { "briefls" },
+	-- cmd = { "nc", "127.0.0.1", "8833" },
+	filetypes = { "brief" },
+	root_markers = { ".git" },
+	-- root_dir = function(fname)
+	-- 	return util.root_pattern(".git")(fname)
+	-- end,
+	single_file_support = true,
+	capabilities = {
+		workspace = {
+			didChangeWatchedFiles = {
+				dynamicRegistration = true,
+			},
+		},
+	},
 })
+-- vim.lsp.config("briefls", {
+-- 	on_attach = lsp_attach,
+-- 	flags = {
+-- 		debounce_text_changes = 150,
+-- 	},
+-- 	capabilities = capabilities,
+-- })
 vim.lsp.enable("briefls")
 -- nvim_lsp.briefls.setup({
 -- 	on_attach = lsp_attach,

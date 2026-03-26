@@ -244,7 +244,7 @@
   },
   "generate mock": {
     "prefix": "gmock",
-    "body": "//go:generate mockgen -source \\${GOFILE} -destination mocks/\\${GOFILE} -package mocks"
+    "body": "go:generate go tool mockgen -package mocks -source \\$GOFILE -destination mocks/contract.go"
   },
   "context": {
     "prefix": "cxx",
